@@ -1,6 +1,6 @@
 const request = require('request');
 
-// Checking if the URL argument is provided
+// Check if the URL argument is provided
 if (process.argv.length < 3) {
   console.error('Usage: node getStatus.js <https://www.flashscore.com.ng/>');
   process.exit(1);
