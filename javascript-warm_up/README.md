@@ -5,3 +5,4 @@ Task 0: First constant, First print. In this project, write a script that prints
 task 1: Printing still
 Task 2: Still on printing scripts
 Task 3: Writing a script that replaces the value of 12 with 89
+Task 4: write a function that returns the addition of two integers
