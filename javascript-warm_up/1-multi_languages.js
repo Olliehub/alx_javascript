@@ -7,6 +7,4 @@ const thirdLine = "JavaScript is amazing";
 /*
 Write a script that prints 3 lines:
 */
-console.log(firstLine);
-console.log(secondLine);
-console.log(thirdLine);
+console.log('firstline\secondline\thirdline');
