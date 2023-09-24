@@ -7,3 +7,4 @@ Task 2: Still on printing scripts
 Task 3: Writing a script that replaces the value of 12 with 89
 Task 4: write a function that returns the addition of two integers
 Task 5: its an advanced task on a file that modifies the value of myVar to 333.
+Task 6: Write a function that executes x times a function
