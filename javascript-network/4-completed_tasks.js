@@ -2,41 +2,45 @@
 
 const request = require('request');
 
-// Define the API URL for all tasks //
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+const apiUrl = process.argv[2];
 
-// Make a GET request to the API to fetch all tasks //
-request.get(apiUrl, { encoding: 'utf-8' }, (error, response, body) => {
+request.get(apiUrl, (error, response, body) => {
   if (error) {
-    console.error(`Error: ${error.message}`);
-  } else if (response.statusCode !== 200) {
-    console.error(`Request failed with status code: ${response.statusCode}`);
-  } else {
-    try {
-      const tasks = JSON.parse(body);
-
-      // Create an object to store the count of completed tasks for each user ID //
-      const userCompletedTasks = {};
-
-      // Count completed tasks for each user //
-      tasks.forEach((task) => {
-        if (task.completed) {
-          const userId = task.userId;
-          if (userCompletedTasks[userId]) {
-            userCompletedTasks[userId]++;
-          } else {
-            userCompletedTasks[userId] = 1;
-          }
-        }
-      });
-
-      // Print the results //
-      for (const userId in userCompletedTasks) {
-        console.log(`User ID ${userId}: ${userCompletedTasks[userId]} completed tasks`);
-      }
-    } catch (e) {
-      console.error(`Error parsing JSON: ${e.message}`);
-    }
+    console.error('Error:', error);
+    return;
   }
-  
+
+  if (response.statusCode !== 200) {
+    console.error('Request failed with status code:', response.statusCode);
+    return;
+  }
+
+  try {
+    // Parse the JSON response //
+    const todos = JSON.parse(body);
+
+    // Filter completed tasks //
+    const completedTasks = todos.filter((todo) => todo.completed);
+
+    // Create an object to store the count of completed tasks for each user ID //
+    const userCompletedTasks = {};
+
+    // Count completed tasks for each user //
+    completedTasks.forEach((task) => {
+      const userId = task.userId;
+      if (userCompletedTasks[userId]) {
+        userCompletedTasks[userId]++;
+      } else {
+        userCompletedTasks[userId] = 1;
+      }
+    });
+
+    // Print the results
+    for (const userId in userCompletedTasks) {
+    
+      console.log(`{'${userId}': ${userCompletedTasks[userId]}}`);
+    }
+  } catch (e) {
+    console.error('Error parsing JSON:', e);
+  }
 });
