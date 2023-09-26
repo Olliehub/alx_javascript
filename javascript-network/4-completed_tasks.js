@@ -43,4 +43,10 @@ request.get(apiUrl, (error, response, body) => {
   } catch (e) {
     console.error('Error parsing JSON:', e);
   }
+
+  // Print the results //
+for (const userId in userCompletedTasks) {
+    console.log(`{"${userId}": ${userCompletedTasks[userId]}}`);
+  }
+  
 });
