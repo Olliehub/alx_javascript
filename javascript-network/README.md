@@ -34,3 +34,9 @@ The first argument is the URL to request
 The second argument the file path to store the body response
 The file must be UTF-8 encoded
 You must use the module request
+
+Task 4: How many completed?
+Write a script that computes the number of tasks completed by user id.
+The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
+Only print users with completed task
+You must use the module request
