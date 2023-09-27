@@ -211,3 +211,11 @@ Sets the name of the object to Draco
 Reward the student one time
 Penalize the student three times
 Log to the console the name and score
+
+Task 7: Stack order and setTimeout
+Write the following commands in the following order:
+
+Log to the console Start of the execution queue
+Log to the console Final code block to be executed using setTimeout (with delay of 0)
+Using a loop that iterates 100 times, each iteration logs to the console the iteration number
+Log to the console End of the loop printing
