@@ -1,0 +1,1 @@
+A README file on ALX Javascript projects on ALX intro to SE
