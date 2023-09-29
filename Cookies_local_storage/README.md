@@ -91,3 +91,16 @@ Requirements:
 Access your code with http://localhost:8080/3-index.html
 Use vanilla javascript to complete the task
 Build the Welcome message with Javascript without using HTML
+
+Task 4: Use js-cookie
+Reusing the code from the previous task:
+
+Add js-cookie to your html page using the jsdelivr CDN
+Delete the getCookie function and use js-cookie get function instead
+Use js-cookie remove function within deleteCookiesAndShowForm function
+Use js-cookie set function within setCookiesAndShowWelcomeMessage function (new function that sets cookies and calls showWelcomeMessageOrForm)
+Requirements:
+
+Access your code with http://localhost:8080/4-index.html
+Build the Welcome message with Javascript without using HTML
+Use js-cookie for every cookie manipulation
