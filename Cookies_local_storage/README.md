@@ -39,3 +39,21 @@ Requirements:
 
 Access your code with http://localhost:8080/1-index.html
 Use vanilla javascript to complete the task
+
+Task 2: Read cookie
+In a file 2-index.html:
+
+Reuse the code of the previous task
+
+Create a function getCookie:
+
+It accepts name as argument
+It should return the value of the cookie with the name passed in argument
+If the cookie does not exist, it should return an empty string
+Modify the function showCookies:
+
+It should display the paragraph Email: EMAIL - Firstname: FIRSTNAME
+Requirements:
+
+Access your code with http://localhost:8080/2-index.html
+Use vanilla javascript to complete the task
