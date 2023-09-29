@@ -57,3 +57,37 @@ Requirements:
 
 Access your code with http://localhost:8080/2-index.html
 Use vanilla javascript to complete the task
+
+Task 3: Delete cookie and mini application
+in a file 3-index.html, reuse your code from the previous task
+
+add a div in html that will contain the login form:
+
+You can reuse the one you previously wrote
+It has one h2
+It has two text inputs
+It has one button
+Write a function named showForm:
+
+It should remove the Welcome message if it exists
+It should show the form
+Write a function named hideForm:
+
+It should hide the form
+Write a function named deleteCookiesAndShowForm:
+
+It should remove the two cookies
+it should show the form by calling the showForm function
+Write a function named showWelcomeMessageOrForm:
+
+if user is not logged in, the function showForm is called
+If the user is logged in, replace the body of the page with a h1
+It should display Welcome FIRSTNAME (logout)
+(logout) should be a link
+The link font should be display in normal weight, italic, and 10px to the right of the message
+On click, call the function deleteCookiesAndShowForm, hide the welcome message, and show the form
+Requirements:
+
+Access your code with http://localhost:8080/3-index.html
+Use vanilla javascript to complete the task
+Build the Welcome message with Javascript without using HTML
